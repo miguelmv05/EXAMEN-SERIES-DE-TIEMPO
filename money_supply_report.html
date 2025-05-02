@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Money Supply Time Series Analysis</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<style>
+  body { font-family: Arial, sans-serif; margin: 40px; }
+  h1, h2 { color: #2c3e50; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
+  table, th, td { border: 1px solid #ccc; }
+  th, td { padding: 8px; text-align: center; }
+  th { background-color: #f2f2f2; }
+  .note { font-size: 0.9em; color: #555; }
+  img { max-width: 100%; height: auto; margin-bottom: 30px; border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+<h1>Money Supply Time Series Analysis Report</h1>
+
+<h2>1. Unit Root Tests Summary</h2>
+<table>
+<thead>
+<tr><th>Test</th><th>Statistic</th><th>p-value</th><th>Conclusion</th></tr>
+</thead>
+<tbody>
+<tr><td>ADF</td><td>[INSERT ADF STAT]</td><td>[INSERT ADF P]</td><td>[INSERT ADF CONCLUSION]</td></tr>
+<tr><td>KPSS</td><td>[INSERT KPSS STAT]</td><td>[INSERT KPSS P]</td><td>[INSERT KPSS CONCLUSION]</td></tr>
+</tbody>
+</table>
+
+<h2>2. Correlogram (First 10 Lags)</h2>
+<table>
+<thead>
+<tr><th>Lag</th><th>ACF</th><th>PACF</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>[ACF1]</td><td>[PACF1]</td></tr>
+<tr><td>2</td><td>[ACF2]</td><td>[PACF2]</td></tr>
+</tbody>
+</table>
+<img src="[INSERT_ACF_PACF_IMAGE]" alt="ACF and PACF Plots">
+
+<h2>3. Best ARIMA Model</h2>
+<ul>
+<li>Order: (p, d, q) = <strong>[INSERT ORDER]</strong></li>
+<li>AIC: <strong>[INSERT AIC]</strong></li>
+<li>Interpretation:</li>
+<ul>
+  <li>p = [P] autoregressive term(s)</li>
+  <li>d = [D] difference(s) needed</li>
+  <li>q = [Q] moving average term(s)</li>
+</ul>
+</ul>
+
+<h2>4. Forecast Summary (Next 5 Periods)</h2>
+<table>
+<thead>
+<tr><th>Period</th><th>Forecast Value</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>[F1]</td></tr>
+<tr><td>2</td><td>[F2]</td></tr>
+<tr><td>3</td><td>[F3]</td></tr>
+<tr><td>4</td><td>[F4]</td></tr>
+<tr><td>5</td><td>[F5]</td></tr>
+</tbody>
+</table>
+
+<h2>5. Forecast Plots</h2>
+<img src="[INSERT_ORIGINAL_SERIES_IMAGE]" alt="Original Money Supply Series">
+<img src="[INSERT_DIFFERENCED_SERIES_IMAGE]" alt="Differenced Money Supply Series">
+<img src="[INSERT_FORECAST_LOG_IMAGE]" alt="Forecast with Log Scale">
+<img src="[INSERT_FORECAST_CI_IMAGE]" alt="Forecast with Confidence Interval">
+
+<h2>6. Forecast Interpretation</h2>
+<ul>
+<li>Last observed value: <strong>[LAST]</strong></li>
+<li>Average forecast value: <strong>[AVG FORECAST]</strong></li>
+<li>Forecast change: <strong>[CHANGE]</strong></li>
+<li>Trend: <strong>[TREND]</strong></li>
+<li>95% Confidence Interval (last period): <strong>[CI LOW] to [CI HIGH]</strong></li>
+</ul>
+
+<p class="note">Note: Replace the placeholders [ ... ] with your actual computed results and upload the generated plot images to your HTML folder. Use image filenames like <code>acf_pacf.png</code>, <code>original_series.png</code>, etc., and update the <code>src</code> accordingly.</p>
+</body>
+</html>
